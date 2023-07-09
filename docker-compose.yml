@@ -1,0 +1,24 @@
+version: "3"
+
+networks:
+  app-tier:
+    driver: bridge
+
+services:
+  livestream:
+    image: yuva/dhan
+    container_name: yuva
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - /usr/etc/.env_test:/app/.env
+    ports:
+      - "8080:8080"
+    networks:
+      - app-tier
+    logging:
+      options:
+        max-size: "1m"
+        max-file: "3"

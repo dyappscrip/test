@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add User</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h1>Add User</h1>
+    <form id="userForm">
+        <label for="index">Index:</label>
+        <input type="number" id="index" name="index" required><br><br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <input type="submit" value="Add User">
+    </form>
+
+    <script>
+        $(document).ready(function() {
+            $("#userForm").submit(function(e) {
+                e.preventDefault();
+
+                var index = parseInt($("#index").val(), 10);
+                var name = $("#name").val();
+
+                var userData = {
+                    index: index,
+                    name: name
+                };
+
+                $.ajax({
+                    url: "/users",
+                    method: "POST",
+                    data: JSON.stringify(userData),
+                    contentType: "application/json",
+                    success: function(response) {
+                        alert("User added successfully");
+                        // Handle success response if needed
+                    },
+                    error: function(xhr, status, error) {
+                        alert("Error adding user: " + error);
+                        // Handle error response if needed
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

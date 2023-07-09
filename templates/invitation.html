@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Invitation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background-color: #4285f4;
+            color: #ffffff;
+            padding: 20px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: normal;
+        }
+
+        .content {
+            padding: 20px;
+            color: #333333;
+        }
+
+        p {
+            margin: 0 0 10px;
+            line-height: 1.5;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4285f4;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+
+        .footer {
+            background-color: #f2f2f2;
+            padding: 20px;
+            text-align: center;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        .footer p {
+            margin: 0;
+            color: #999999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>You're Invited!</h1>
+        </div>
+        <div class="content">
+            <p>Dear {{.data.GuestName}},</p>
+            <p>You are cordially invited to join us for a special event.</p>
+            <p>Date: {{.data.EventDate}}</p>
+            <p>Time: {{.data.EventTime}}</p>
+            <p>Location: {{.data.EventLocation}}</p>
+            <p>Don't miss out on this exciting occasion!</p>
+            <p>
+                <a href="" class="button">RSVP Now</a>
+            </p>
+        </div>
+        <div class="footer">
+            <p>For more information, please contact {{.data.ContactName}} at {{.data.ContactEmail}} or {{.data.ContactPhone}}.</p>
+        </div>
+    </div>
+</body>
+
+</html>
