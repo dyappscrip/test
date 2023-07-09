@@ -89,5 +89,5 @@ func main() {
 		c.JSON(http.StatusOK, gin.H{"message": "User name added successfully"})
 	})
 
-	router.Run(":8080")
+	router.Run(":80")
 }
