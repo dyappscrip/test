@@ -15,7 +15,7 @@ services:
     volumes:
       - /usr/etc/.env_test:/app/.env
     ports:
-      - "8080:8080"
+      - "80:80"
     networks:
       - app-tier
     logging:

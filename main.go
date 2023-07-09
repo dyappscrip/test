@@ -51,9 +51,9 @@ func main() {
 
 		data := InvitationData{
 			GuestName:     user.Name,
-			EventDate:     "July 15, 2023",
-			EventTime:     "7:00 PM",
-			EventLocation: "123 Main Street, City",
+			EventDate:     "July 11, 2023",
+			EventTime:     "9:00 PM",
+			EventLocation: "Mahadev mandir, krishnakunj soc.",
 			RSVPlink:      "http://example.com/rsvp",
 			ContactName:   "Jane Smith",
 			ContactEmail:  "jane@example.com",
